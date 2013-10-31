@@ -5,7 +5,7 @@
       <br/>
       <%= semantic_form_for admin,
                             :method => :put,
-                            :url    => "/admin/admin_users/#{admin.id}" do |f| %>
+                            :url    => "/admin/users/#{admin.id}" do |f| %>
         <%= f.inputs do %>
           <%= f.input :password, :as => :password, :required => true %>
           <%= f.input :password_confirmation, :as => :password, :required => true %>
@@ -19,7 +19,7 @@
                   data-id="#admin_<%= admin.id %>">
         Credentials
       </a>
-      <a href="/admin/admin_users/<%= admin.id %>"
+      <a href="/admin/users/<%= admin.id %>"
          class="member_link delete_link"
          data-method="delete"
          data-confirm="Are you sure?"
