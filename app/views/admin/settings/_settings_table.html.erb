@@ -19,9 +19,7 @@
       </td>
       <td>
         <div class="form <%= setting.type %>">
-          <%= semantic_form_for setting,
-              :method => :put,
-              :url    => "/admin/settings/#{setting.id}" do |f| %>
+          <%= semantic_form_for setting, html: {:method => :put }, :url => "/admin/settings/#{setting.id}" do |f| %>
             <%= f.inputs do %>
               <% case setting.type %>
               <% when "file" %>
